@@ -1,0 +1,33 @@
+﻿@model GuerraCivil.ViewModel.IndexViewModel
+    
+@{
+    ViewBag.Title = "Personagens";
+}
+
+<h2>Time1</h2>
+<ul>
+    
+    @foreach (var item in Model.Time1)
+    {
+        int soma = 0;
+        <li>
+            @item.IdPersonagem
+            @item.Nome
+            /Total Quadrinhos = @item.QuantQuadrinhos
+        </li>              
+    }    
+</ul>
+
+
+<h2>Time2</h2>
+<ul>
+    @foreach (var item in Model.Time2)
+    {
+    <li>
+        @item.IdPersonagem
+        @item.Nome
+        Total Quadrinhos = @item.QuantQuadrinhos
+    </li>
+    }
+</ul>
+

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<GuerraCivil.Models.Personagem>
+
+@{
+    ViewBag.Title = "Atualizar";
+}
+
+<h2>Atualizar</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdPersonagem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuantQuadrinhos)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdPersonagem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantQuadrinhos)
+            </td>
+        </tr>
+    }
+
+</table>
